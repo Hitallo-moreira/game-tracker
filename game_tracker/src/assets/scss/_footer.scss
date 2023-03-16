@@ -2,17 +2,13 @@
 @import "@/assets/scss/breakpoints.scss";
 
 footer {
-    height: 311px;
+    height: auto;
     width: 100%;
     background-color: $default-blue;
     position: absolute;
     bottom: 0;
     font-family: $default-font-family;
     font-size: $base-font-size;
-
-    @include xs-breakpoint {
-        height: auto;
-    }
 
     .footer-content {
         padding: 61px 0px;
@@ -36,8 +32,11 @@ footer {
             @include xs-breakpoint {
                 font-size: $xs-font-size;
                 line-height: $xs-line-height;
-                text-align: center;
                 margin-bottom: 12px;
+            }
+
+            @include sm-breakpoint {
+                text-align: center;
             }
         }
 
@@ -45,7 +44,7 @@ footer {
             ul {
                 list-style: none;
 
-                @include xs-breakpoint {
+                @include sm-breakpoint {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -78,18 +77,22 @@ footer {
                         }
                     }
 
-                    @include xs-breakpoint {
+                    @include sm-breakpoint {
                         margin: 0px 0px 8px 0px;
 
                         &:last-child {
                             margin-bottom: 15px;
                         }
                     }
+
+                    @include md-breakpoint {
+                        margin-left: 23px;
+                    }
                 }
             }
         }
 
-        @include xs-breakpoint {
+        @include sm-breakpoint {
             padding: 22px 0px 0px 0px;
         }
     }

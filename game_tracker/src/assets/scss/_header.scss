@@ -18,10 +18,14 @@
     @include xs-breakpoint {
         width: calc(100% - 16px);
     }
+
+    @include sm-breakpoint {
+        width: calc(100% - 32px);
+    }
 }
 
 .main.logo {
-    @include xs-breakpoint {
+    @include sm-breakpoint {
         display: flex;
         justify-content: center;
     }
