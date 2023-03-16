@@ -19,3 +19,10 @@
         width: calc(100% - 16px);
     }
 }
+
+.main.logo {
+    @include xs-breakpoint {
+        display: flex;
+        justify-content: center;
+    }
+}
