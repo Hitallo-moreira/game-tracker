@@ -1,0 +1,57 @@
+@import "@/assets/scss/_variables.scss";
+
+footer {
+    height: 311px;
+    width: 100%;
+    background-color: $default-blue;
+    position: absolute;
+    bottom: 0;
+    font-family: $default-font-family;
+    font-size: $base-font-size;
+
+    .footer-content {
+        padding: 61px 0px;
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+
+        .footer-info {
+            color: $default-white;
+            font-weight: $base-font-weight;
+            line-height: $default-line-height;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            ul {
+                list-style: none;
+
+                li {
+                    float: left;
+                    margin-left: 46px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    a {
+                        font-family: $default-font-family;
+                        font-weight: $medium-font-weight;
+                        font-size: $base-font-size;
+                        line-height: $default-line-height;
+                        color: $default-white;
+                        text-decoration: none;
+                        transition: .3s;
+
+                        &:hover {
+                            color: $details-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
