@@ -1,13 +1,18 @@
 <template>
-  <Header />
+  <div>
+    <GameHeader />
+    <GameFooter />
+  </div>
 </template>
 
 <script>
-import Header from './components/Header/GameHeader.vue'
+import GameHeader from './components/Header/GameHeader.vue'
+import GameFooter from './components/Footer/GameFooter.vue'
 
 export default {
   components: {
-    Header
+    GameHeader,
+    GameFooter
   }
 }
 
