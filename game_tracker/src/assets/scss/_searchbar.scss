@@ -32,5 +32,14 @@
             line-height: 21px;
             color: $default-white;
         }
+
+        &::before {
+            position: absolute;
+            content: '';
+            background: url('../../../public/img/search_icon.png');
+            display: inline-block;
+            height: 17px;
+            width: 17px;
+        }
     }
 }
