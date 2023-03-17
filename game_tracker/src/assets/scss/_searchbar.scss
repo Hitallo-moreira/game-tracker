@@ -1,0 +1,36 @@
+@import "@/assets/scss/_variables.scss";
+@import "@/assets/scss/breakpoints.scss";
+
+.search {
+    margin-top: 45px;
+
+    .title {
+        color: $default-white;
+        font-family: $default-font-family;
+        font-weight: $base-font-weight;
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 22px;
+    }
+
+    #searchbar {
+        position: absolute;
+        width: 380px;
+        height: 50px;
+        background: $default-blue;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        padding: 0px 20px 0px 40px;
+        caret-color: $details-color;
+        color: $default-white;
+        font-size: $medium-font-size;
+
+        &::placeholder {
+            font-family: $default-font-family;
+            font-weight: $light-font-weight;
+            line-height: 21px;
+            color: $default-white;
+        }
+    }
+}

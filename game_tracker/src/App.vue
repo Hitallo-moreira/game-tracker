@@ -2,17 +2,20 @@
   <div>
     <GameHeader />
     <GameFooter />
+    <SearchBar />
   </div>
 </template>
 
 <script>
 import GameHeader from './components/Header/GameHeader.vue'
 import GameFooter from './components/Footer/GameFooter.vue'
+import SearchBar from './components/SearchBar/SearchBar.vue'
 
 export default {
   components: {
     GameHeader,
-    GameFooter
+    GameFooter,
+    SearchBar
   }
 }
 
