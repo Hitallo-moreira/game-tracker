@@ -42,5 +42,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/_footer.scss";
+@import "@/assets/scss/components/_footer.scss";
 </style>

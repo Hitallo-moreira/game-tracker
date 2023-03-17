@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/_searchbar.scss";
+@import "@/assets/scss/components/_searchbar.scss";
 </style>
