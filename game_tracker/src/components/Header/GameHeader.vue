@@ -2,7 +2,9 @@
   <div>
     <nav class="menu">
       <div class="main logo">
-        <img class="logo-img" :src="logo_src">
+        <a href="#">
+          <img class="logo-img" :src="logo_src" :alt="logo_alt">
+        </a>
       </div>
     </nav>
   </div>
@@ -13,7 +15,8 @@ export default {
   name: "GameHeader",
   data() {
     return {
-      logo_src: '/img/logo.svg'
+      logo_src: '/img/logo.svg',
+      logo_alt: 'Game Tracker logo'
     }
   }
 }

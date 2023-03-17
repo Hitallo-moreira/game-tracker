@@ -2,7 +2,7 @@
     <footer>
         <div class="main footer-content">
             <div class="footer-logo">
-                <img :src="footer_logo">
+                <img :src="footer_logo" :alt="footer_logo_alt">
             </div>
 
             <p class="footer-info">
@@ -31,10 +31,11 @@
 
 <script>
 export default {
-    name: 'GameFooter',
+    name: "GameFooter",
     data() {
         return {
-            footer_logo: '/img/footer-logo.svg'
+            footer_logo: '/img/footer-logo.svg',
+            footer_logo_alt: 'Footer logo'
         }
     }
 }
