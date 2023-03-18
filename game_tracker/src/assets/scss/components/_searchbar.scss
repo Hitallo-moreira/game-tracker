@@ -21,25 +21,19 @@
         border-radius: 8px;
         outline: none;
         border: none;
-        padding: 0px 20px 0px 40px;
+        padding: 0px 20px 0px 50px;
         caret-color: $details-color;
         color: $default-white;
         font-size: $medium-font-size;
+        background-image: url('../../../public/img/search_icon.png');
+        background-position: left 19px top 50%;
+        background-repeat: no-repeat;
 
         &::placeholder {
             font-family: $default-font-family;
             font-weight: $light-font-weight;
             line-height: 21px;
             color: $default-white;
-        }
-
-        &::before {
-            position: absolute;
-            content: '';
-            background: url('../../../public/img/search_icon.png');
-            display: inline-block;
-            height: 17px;
-            width: 17px;
         }
     }
 }
