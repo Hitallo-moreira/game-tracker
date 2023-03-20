@@ -1,0 +1,49 @@
+@import "@/assets/scss/base/_variables.scss";
+@import "@/assets/scss/layout/breakpoints.scss";
+
+.order-by {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .filter-title {
+        display: flex;
+        font-family: $default-font-family;
+        font-weight: $medium-font-weight;
+        font-size: $medium-font-size;
+        color: $default-white;
+        line-height: 21px;
+        margin-right: 20px;
+    }
+
+    #filters {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        display: flex;
+        align-items: center;
+        width: 180px;
+        height: 50px;
+        background: $default-blue;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        font-family: $default-font-family;
+        font-size: $medium-font-size;
+        line-height: 21px;
+        color: $default-white;
+        font-weight: $light-font-weight;
+        padding: 13px 0px 13px 17px;
+        outline: none;
+        border: none;
+        background-image: url('../../../public/img/arrow.svg');
+        background-position: right 16px top 50%;
+        background-repeat: no-repeat;
+    }
+    
+    #filters > option {
+        font-weight: $light-font-weight;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+    }
+}
