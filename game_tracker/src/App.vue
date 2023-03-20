@@ -3,6 +3,7 @@
     <GameHeader />
     <SearchBar />
     <GameFilter />
+    <GameCard />
     <GameFooter />
   </div>
 </template>
@@ -12,12 +13,14 @@ import GameHeader from './components/Header/GameHeader.vue'
 import SearchBar from './components/SearchBar/SearchBar.vue'
 import GameFilter from './components/Filter/GameFilter.vue'
 import GameFooter from './components/Footer/GameFooter.vue'
+import GameCard from './components/Card/GameCard.vue'
 
 export default {
   components: {
     GameHeader,
     SearchBar,
     GameFilter,
+    GameCard,
     GameFooter
   }
 }
