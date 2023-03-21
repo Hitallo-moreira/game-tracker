@@ -26,7 +26,7 @@
                                         {{item.normalPrice}}
                                     </div>
                                 </div>
-                                <button class="addtocart">
+                                <button class="savings">
                                     <span>{{item.savings}}</span>
                                 </button>
                             </div>
