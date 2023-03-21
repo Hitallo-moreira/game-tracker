@@ -1,6 +1,15 @@
 @import "@/assets/scss/base/_variables.scss";
 @import "@/assets/scss/layout/breakpoints.scss";
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr; 
+}
+
+.grid-item {
+    display: inline-grid;
+}
+
 .card {
     color: $default-white;
     width: 380px;
@@ -18,6 +27,7 @@
 
     .game-info {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         padding: 7px 16px 16px 16px;
         
@@ -37,6 +47,7 @@
                 border-radius: 8px;
                 font-weight: $medium-font-weight;
                 cursor: pointer;
+                transition: .3s;
 
                 span {
                     font-weight: $medium-font-weight;
@@ -46,12 +57,17 @@
                     color: $default-white;
                     font-family: 'Roboto';
                 }
+
+                &:hover {
+                    background-color: #e00670;
+                }
             }
         }
 
-        .right-content {
+        .bottom-content {
             display: flex;
             align-items: flex-end;
+            justify-content: space-between;
 
             .buy {
                 display: flex;

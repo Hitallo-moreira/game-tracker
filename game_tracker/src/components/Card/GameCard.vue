@@ -1,22 +1,22 @@
 <template>
     <div>
         <div>
-            <div class="main card-row">
-                <div class="card" v-for="(item, index) in listItems" v-bind:key="index">
+            <div class="main grid-container">
+                <div class="grid-item card" v-for="(item, index) in listItems" v-bind:key="index">
                     <div class="game-thumb">
                     </div>
                     <div class="game-info">
-                        <div class="left-content ">
+                        <div>
                             <div class="game-title">
                                 {{item.title}}
                             </div>
+                        </div>
+                        <div class="bottom-content">
                             <div class="details">
                                 <button class="details-btn">
                                     <span>Detalhes</span>
                                 </button>
                             </div>
-                        </div>
-                        <div class="right-content ">
                             <div class="buy">
                                 <div class="game-price">
                                     <div class="sale-price">
@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <button class="addtocart">
-                                    <span>Comprar</span>
+                                    <span>{{item.savings}}</span>
                                 </button>
                             </div>
                         </div>
