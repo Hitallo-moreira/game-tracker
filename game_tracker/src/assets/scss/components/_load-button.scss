@@ -1,0 +1,37 @@
+@import "@/assets/scss/base/_variables.scss";
+@import "@/assets/scss/layout/breakpoints.scss";
+
+
+.load-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 44px;
+    
+    .load-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 380px;
+        height: 50px;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        background: $default-blue;
+        cursor: pointer;
+        transition: .3s;
+        
+        span {
+            color: $default-white;
+            font-weight: $light-font-weight;
+            font-size: $medium-font-size;
+        }
+
+        &:hover {
+            background: #111d4d;
+        }
+
+        @include xs-breakpoint {
+            width: 304px;
+        }
+    }
+}
