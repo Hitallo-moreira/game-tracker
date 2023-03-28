@@ -1,9 +1,12 @@
 <template>
   <div>
     <GameHeader />
-    <SearchBar />
-    <GameFilter />
+    <div class="main heading-options">
+      <SearchBar />
+      <GameFilter />
+    </div>
     <GameCard />
+    <LoadButton />
     <GameFooter />
   </div>
 </template>
@@ -14,6 +17,7 @@ import SearchBar from './components/SearchBar/SearchBar.vue'
 import GameFilter from './components/Filter/GameFilter.vue'
 import GameFooter from './components/Footer/GameFooter.vue'
 import GameCard from './components/Card/GameCard.vue'
+import LoadButton from './components/LoadButton/LoadButton.vue'
 
 export default {
   components: {
@@ -21,6 +25,7 @@ export default {
     SearchBar,
     GameFilter,
     GameCard,
+    LoadButton,
     GameFooter
   }
 }

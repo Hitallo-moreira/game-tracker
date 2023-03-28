@@ -1,7 +1,9 @@
 <template>
-    <div class="main search">
+    <div>
         <h1 class="title">{{ title }}</h1>
-        <input type="text" id="searchbar" class="heading-options" placeholder="Procurar">
+        <div class="search">
+            <input type="text" id="searchbar" placeholder="Procurar">
+        </div>
     </div>
 </template>
 

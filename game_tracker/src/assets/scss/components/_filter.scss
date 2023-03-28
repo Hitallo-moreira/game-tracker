@@ -5,6 +5,18 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    position: relative;
+    top: 2px;
+    height: 50px;
+
+    @include xs-breakpoint {
+        top: 0;
+    }
+
+    @include sm-breakpoint {
+        align-items: baseline;
+        width: 380px;
+    }
 
     .filter-title {
         display: flex;
@@ -14,36 +26,138 @@
         color: $default-white;
         line-height: 21px;
         margin-right: 20px;
+
+        @include xs-breakpoint {
+            font-size: $xs-font-size;
+            line-height: 12px;
+            margin: 0px 0px 4px 0;
+        }
     }
 
-    #filters {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        display: flex;
-        align-items: center;
+    .dropdown {
         width: 180px;
         height: 50px;
-        background: $default-blue;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 8px;
-        font-family: $default-font-family;
-        font-size: $medium-font-size;
-        line-height: 21px;
-        color: $default-white;
-        font-weight: $light-font-weight;
-        padding: 13px 0px 13px 17px;
-        outline: none;
-        border: none;
-        background-image: url('../../../public/img/arrow.svg');
-        background-position: right 16px top 50%;
-        background-repeat: no-repeat;
-    }
+
+        .select {
+            background: $default-blue;
+            border-radius: 8px;
+            padding: 13px 16px 13px 16px;
+            transition: .3s;
+            background-image: url('../../../public/img/arrow.svg');
+            background-position: right 16px top 50%;
+            background-repeat: no-repeat;
+            font-weight: $light-font-weight;
+            font-size: $medium-font-size;
+            line-height: 21px;
+            color: $default-white;
+            height: 50px;
+            cursor: pointer;
+
+            @include xs-breakpoint {
+                display: flex;
+                align-items: center;
+                padding: 10px 10px 10px 8px;
+                background-position: right 7px top 50%;
+                font-size: $base-font-size;
+                height: 36px;
+            }
+
+            @include sm-breakpoint {
+                background-position: right 7px top 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @include lg-breakpoint {
+                width: 180px;
+            }
+
+            .selected {
+                @include xs-breakpoint {
+                    font-size: $base-font-size;
+                    line-height: 16px;
+                }
+            }
+        }
     
-    #filters > option {
-        font-weight: $light-font-weight;
-        outline: none;
-        border: none;
-        border-radius: 8px;
+        .options {
+            list-style: none;
+            font-weight: $light-font-weight;
+            font-size: $medium-font-size;
+            line-height: 21px;
+            color: $default-white;
+            background-color: $default-blue;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            opacity: 0;
+            display: none;
+            transition: .3s;
+            z-index: 1;
+    
+            li {
+                cursor: pointer;
+                transition: .3s;
+                padding: 7px 0px 7px 17px;
+                
+                &:hover {
+                    color: $details-color;
+                    font-weight: 400;
+                }
+
+                &:last-child {
+                    padding-bottom: 16px;
+                }
+
+                @include xs-breakpoint {
+                    padding: 10px 10px 10px 8px;
+                }
+
+                @include sm-breakpoint {
+                    text-align: center;
+                    padding: 10px 16px 10px 16px;
+                }
+            }
+
+            @include xs-breakpoint {
+                font-weight: $light-font-weight;
+                font-size: $base-font-size;
+                line-height: 16px;
+                height: 36px;
+            }
+
+            @include sm-breakpoint {
+                width: 186px;
+            }
+        }
+    
+        .open-options {
+            display: block;
+            opacity: 1;
+        }
+
+        .active {
+            border-radius: unset;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+
+        @include xs-breakpoint {
+            height: 36px;
+            width: 122px;
+        }
+
+        @include md-breakpoint {
+            width: 180px;
+        }
+
+        @include lg-breakpoint {
+            width: 180px;
+        }
+    }
+
+    @include xs-breakpoint {
+        flex-direction: column;
+        width: 43%;
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div>
-            <div class="main grid-container">
+        <div class="main">
+            <div class="grid-container">
                 <div class="grid-item card" v-for="(item, index) in listItems" v-bind:key="index">
                     <div class="game-thumb">
                     </div>
@@ -51,6 +51,7 @@ export default {
         const res = await fetch("https://www.cheapshark.com/api/1.0/deals?pageNumber=0&pageSize=12&storeID=1&onSale=1&AAA=1");
         const finalRes = await res.json();
         this.listItems = finalRes;
+        console.log(finalRes);
       }
     },
     mounted() {

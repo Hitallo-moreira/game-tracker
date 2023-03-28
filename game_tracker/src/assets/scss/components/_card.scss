@@ -2,8 +2,25 @@
 @import "@/assets/scss/layout/breakpoints.scss";
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr; 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 37px 0px 40px 0px;
+    gap: 49px;
+    
+    @include xs-breakpoint {
+        margin: 23px 0px 30px 0px;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    @include sm-breakpoint {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    @include md-breakpoint {
+        gap: 4px;
+    }
 }
 
 .grid-item {
@@ -15,7 +32,6 @@
     width: 380px;
     height: auto;
     background-color: $default-blue;
-    margin-bottom: 20px;
     border-radius: 8px;
     
     .game-thumb {
@@ -23,6 +39,10 @@
         height: 147px;
         background-color: rgb(126, 120, 120);
         border-radius: 8px 8px 0px 0px;
+
+        @include xs-breakpoint {
+            height: 95px;
+        }
     }
 
     .game-info {
@@ -36,6 +56,12 @@
             font-size: 24px;
             line-height: 28px;
             margin-bottom: 14px;
+
+            @include xs-breakpoint {
+                font-size: $medium-font-size;
+                line-height: 21px;
+                margin-bottom: 16px;
+            }
         }
 
         .details {
@@ -55,11 +81,20 @@
                     line-height: 21px;
                     text-transform: uppercase;
                     color: $default-white;
-                    font-family: 'Roboto';
+
+                    @include xs-breakpoint {
+                        font-size: $base-font-size;
+                        line-height: 16px;
+                    }
                 }
 
                 &:hover {
                     background-color: #e00670;
+                }
+
+                @include xs-breakpoint {
+                    width: 92px;
+                    height: 30px;
                 }
             }
         }
@@ -86,6 +121,11 @@
                         &::before {
                             content: '$';
                         }
+
+                        @include xs-breakpoint {
+                            font-size: $xs-font-size;
+                            line-height: 12px;
+                        }
                     }
     
                     .normal-price {
@@ -96,26 +136,43 @@
                         &::before {
                             content: '$';
                         }
+
+                        @include xs-breakpoint {
+                            font-size: $base-font-size;
+                            line-height: 16px;
+                        }
                     }
                 }
                 
                 .savings {
+                    display: flex;
+                    align-items: center;
                     width: 84px;
                     height: 39px;
                     background-color: $buy-button;
                     border: none;
                     border-radius: 8px;
                     font-weight: $medium-font-weight;
-                    cursor: pointer;
-    
-                    span {
-                        font-size: 18px;
-                        line-height: 21px;
-                        text-align: center;
-                        color: $default-white;
+                    font-size: $medium-font-size;
+                    line-height: 21px;
+                    color: $default-white;
+
+                    @include xs-breakpoint {
+                        width: 64px;
+                        height: 31px;
+                        font-size: $base-font-size;
+                        line-height: 16px;
                     }
                 }
             }
         }
+
+        @include xs-breakpoint {
+            padding: 9px 11px 11px 11px;
+        }
+    }
+
+    @include xs-breakpoint {
+        width: 304px;
     }
 }
