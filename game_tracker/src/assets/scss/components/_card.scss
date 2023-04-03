@@ -113,6 +113,21 @@
                     margin-right: 10px;
 
                     .sale-price {
+                        font-weight: $medium-font-weight;
+                        font-size: $medium-font-size;
+                        line-height: 21px;
+    
+                        &::before {
+                            content: '$';
+                        }
+    
+                        @include xs-breakpoint {
+                            font-size: $base-font-size;
+                            line-height: 16px;
+                        }
+                    }
+                    
+                    .normal-price {
                         font-weight: $light-font-weight;
                         font-size: 12px;
                         line-height: 14px;
@@ -121,25 +136,10 @@
                         &::before {
                             content: '$';
                         }
-
+    
                         @include xs-breakpoint {
                             font-size: $xs-font-size;
                             line-height: 12px;
-                        }
-                    }
-    
-                    .normal-price {
-                        font-weight: $medium-font-weight;
-                        font-size: $medium-font-size;
-                        line-height: 21px;
-    
-                        &::before {
-                            content: '$';
-                        }
-
-                        @include xs-breakpoint {
-                            font-size: $base-font-size;
-                            line-height: 16px;
                         }
                     }
                 }

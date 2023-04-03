@@ -28,9 +28,9 @@
     font-size: 36px;
     line-height: 42px;
     margin-bottom: 22px;
-    text-align: center;
     margin-top: 16px;
-
+    text-align: left;
+    
     @include xs-breakpoint {
         font-size: $medium-font-size;
         line-height: 21px;
@@ -38,6 +38,15 @@
         right: 50%;
         left: 40%;
         position: relative;
+        text-align: center;
+    }
+
+    @include lg-breakpoint {
+        text-align: center;
+    }
+
+    @include sm-breakpoint {
+        text-align: center;
     }
 }
 
