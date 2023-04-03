@@ -24,7 +24,7 @@ export default {
       makeDropdown() {
         const select = this.$el.querySelector(".select");
         const optionList = this.$el.querySelector(".options");
-        const optionSelected = this.$el.querySelector(".options li");
+        const optionSelected = this.$el.querySelector("ul");
         
         select.addEventListener("click", function() {
           select.classList.add('active') 
