@@ -19,15 +19,15 @@
                             </div>
                             <div class="buy">
                                 <div class="game-price">
-                                    <div class="sale-price">
-                                        {{item.salePrice}}
-                                    </div>
                                     <div class="normal-price">
                                         {{item.normalPrice}}
                                     </div>
+                                    <div class="sale-price">
+                                        {{item.salePrice}}
+                                    </div>
                                 </div>
                                 <button class="savings">
-                                    <span>{{item.savings}}</span>
+                                    <span id="saving-label"></span>
                                 </button>
                             </div>
                         </div>
@@ -47,11 +47,19 @@ export default {
       }
     },
     methods: {
-      async getData() {
-        const res = await fetch("https://www.cheapshark.com/api/1.0/deals?pageNumber=0&pageSize=12&storeID=1&onSale=1&AAA=1");
-        const finalRes = await res.json();
-        this.listItems = finalRes;
-      }
+        async getData() {
+            const res = await fetch("https://www.cheapshark.com/api/1.0/deals?pageNumber=0&pageSize=12&storeID=1&onSale=1&AAA=1");
+            const finalRes = await res.json();
+            this.listItems = finalRes;
+
+            const savingsArray = [];
+
+            finalRes.forEach(obj => {
+                const savingsValue = obj['savings'];
+                const savingsInt = parseInt(savingsValue);
+                savingsArray.push(savingsInt);
+            });
+        }
     },
     mounted() {
       this.getData()
