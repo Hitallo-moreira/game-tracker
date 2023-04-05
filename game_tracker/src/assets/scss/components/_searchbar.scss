@@ -27,8 +27,7 @@
     font-weight: $base-font-weight;
     font-size: 36px;
     line-height: 42px;
-    margin-bottom: 22px;
-    margin-top: 16px;
+    margin: 45px 0px 22px 0px;
     text-align: left;
     
     @include xs-breakpoint {
@@ -39,6 +38,7 @@
         left: 40%;
         position: relative;
         text-align: center;
+        margin-top: 16px;
     }
 
     @include lg-breakpoint {
@@ -51,7 +51,6 @@
 }
 
 .search {
-    margin-top: 45px;
 
     #searchbar {
         width: 380px;

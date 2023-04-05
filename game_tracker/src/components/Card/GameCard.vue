@@ -27,7 +27,9 @@
                                     </div>
                                 </div>
                                 <button class="savings">
-                                    <span id="saving-label"></span>
+                                    <span id="saving-label">
+                                        {{ item.savings }}
+                                    </span>
                                 </button>
                             </div>
                         </div>

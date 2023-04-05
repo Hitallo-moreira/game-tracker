@@ -19,7 +19,7 @@
     }
 
     .filter-title {
-        display: flex;
+        display: flex;  
         font-family: $default-font-family;
         font-weight: $medium-font-weight;
         font-size: $medium-font-size;
@@ -99,6 +99,7 @@
                 cursor: pointer;
                 transition: .3s;
                 padding: 7px 0px 7px 17px;
+                background-color: $default-blue;
                 
                 &:hover {
                     color: $details-color;
@@ -111,6 +112,10 @@
 
                 @include xs-breakpoint {
                     padding: 10px 10px 10px 8px;
+
+                    &:last-child {
+                        padding-bottom: 10px;
+                    }
                 }
 
                 @include sm-breakpoint {
@@ -127,7 +132,7 @@
             }
 
             @include sm-breakpoint {
-                width: 186px;
+                width: 180px;
             }
         }
     
