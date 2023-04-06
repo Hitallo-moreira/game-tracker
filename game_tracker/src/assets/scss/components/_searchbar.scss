@@ -28,7 +28,7 @@
     font-size: 36px;
     line-height: 42px;
     margin: 45px 0px 22px 0px;
-    text-align: left;
+    float: left;
     
     @include xs-breakpoint {
         font-size: $medium-font-size;
@@ -39,6 +39,7 @@
         position: relative;
         text-align: center;
         margin-top: 16px;
+        float: initial;
     }
 
     @include lg-breakpoint {
@@ -47,6 +48,7 @@
 
     @include sm-breakpoint {
         text-align: center;
+        float: initial;
     }
 }
 
