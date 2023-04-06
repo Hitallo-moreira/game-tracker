@@ -4,6 +4,7 @@
             <div class="grid-container">
                 <div class="grid-item card" v-for="(item, index) in listItems" v-bind:key="index">
                     <div class="game-thumb">
+                        <img :src="item.thumb" alt="game thumbnail">
                     </div>
                     <div class="game-info">
                         <div>
@@ -52,9 +53,9 @@ export default {
         async getData() {
             const res = await fetch("https://www.cheapshark.com/api/1.0/deals?pageNumber=0&pageSize=12&storeID=1&onSale=1&AAA=1");
             const finalRes = await res.json();
+            const savingsArray = [];
             this.listItems = finalRes;
 
-            const savingsArray = [];
 
             finalRes.forEach(obj => {
                 const savingsValue = obj['savings'];
