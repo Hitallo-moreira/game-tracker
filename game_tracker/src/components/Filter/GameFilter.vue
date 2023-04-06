@@ -24,7 +24,6 @@ export default {
       makeDropdown() {
         const select = this.$el.querySelector(".select");
         const optionList = this.$el.querySelector(".options");
-        const optionSelected = this.$el.querySelector("ul");
 
         select.addEventListener("click", function() {
           select.classList.add('active') 
@@ -37,12 +36,10 @@ export default {
 
             const optionOutput = document.querySelector(".selected");
             optionOutput.textContent = `${option}`;
-          }
-        });
 
-        optionSelected.addEventListener("click", function() {
-          select.classList.remove('active') 
-          optionList.classList.remove('open-options');
+            select.classList.remove('active') 
+            optionList.classList.remove('open-options');
+          }
         });
       }
     }
