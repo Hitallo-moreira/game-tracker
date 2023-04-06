@@ -25,10 +25,19 @@ export default {
         const select = this.$el.querySelector(".select");
         const optionList = this.$el.querySelector(".options");
         const optionSelected = this.$el.querySelector("ul");
-        
+
         select.addEventListener("click", function() {
           select.classList.add('active') 
           optionList.classList.add('open-options');
+        });
+
+        optionList.addEventListener("click", function(e) {
+          if (e.target && e.target.nodeName === "LI") {
+            const option = e.target.textContent;
+
+            const optionOutput = document.querySelector(".selected");
+            optionOutput.textContent = `${option}`;
+          }
         });
 
         optionSelected.addEventListener("click", function() {
