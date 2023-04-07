@@ -27,8 +27,8 @@
                                         {{item.salePrice}}
                                     </div>
                                 </div>
-                                <span ref="savings">
-                                    {{ texto }}
+                                <span class="savings">
+                                    {{savingsArray[index]}}
                                 </span>
                             </div>
                         </div>
@@ -45,6 +45,7 @@ export default {
      data() {
       return {
         listItems: [],
+        savingsArray: [],
         savings: null
       }
     },
@@ -52,16 +53,14 @@ export default {
         async getData() {
             const res = await fetch("https://www.cheapshark.com/api/1.0/deals?pageNumber=0&pageSize=12&storeID=1&onSale=1&AAA=1");
             const finalRes = await res.json();
-            const savingsArray = [];
             this.listItems = finalRes;
 
             finalRes.forEach(obj => {
                 const savingsValue = obj['savings'];
                 const savingsInt = parseInt(savingsValue);
-                savingsArray.push(savingsInt);
+                this.savingsArray.push(savingsInt);
                 this.texto = savingsInt;
             });
-
         }
     },
     mounted() {
