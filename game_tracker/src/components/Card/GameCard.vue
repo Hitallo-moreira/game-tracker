@@ -27,11 +27,9 @@
                                         {{item.salePrice}}
                                     </div>
                                 </div>
-                                <button class="savings">
-                                    <span id="saving-label">
-                                        {{ item.savings }}
-                                    </span>
-                                </button>
+                                <span ref="savings">
+                                    {{ texto }}
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -46,7 +44,8 @@ export default {
     name: "GameCard",
      data() {
       return {
-        listItems: []
+        listItems: [],
+        savings: null
       }
     },
     methods: {
@@ -56,16 +55,18 @@ export default {
             const savingsArray = [];
             this.listItems = finalRes;
 
-
             finalRes.forEach(obj => {
                 const savingsValue = obj['savings'];
                 const savingsInt = parseInt(savingsValue);
                 savingsArray.push(savingsInt);
+                this.texto = savingsInt;
             });
+
         }
     },
     mounted() {
-      this.getData()
+      this.getData(),
+      this.savings = this.$refs.savings;
     }
 }
 </script>
