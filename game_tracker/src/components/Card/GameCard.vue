@@ -1,5 +1,20 @@
 <template>
     <div>
+        <div class="main heading-options">
+            <div class="order-by">
+                <p class="filter-title">Ordernar por:</p>
+                <div class="dropdown" @click="makeDropdown()">
+                    <div class="select">
+                        <span class="selected">{{ selectedFilter }}</span>
+                    </div>
+                    <ul class="options">
+                        <li v-for="(filter_name, index) in filters" v-bind:key="index" @click="updateFilter(filter_name)">
+                            {{ filter_name }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="main">
             <div class="grid-container">
                 <div class="grid-item card" v-for="(item, index) in listItems" v-bind:key="index">
@@ -46,7 +61,9 @@ export default {
       return {
         listItems: [],
         savingsArray: [],
-        savings: null
+        savings: null,
+        filters: ['% de Desconto', 'Maior preço', 'Menor preço', 'Título'],
+        selectedFilter: "% de Desconto",
       }
     },
     methods: {
@@ -61,15 +78,58 @@ export default {
                 this.savingsArray.push(savingsInt);
                 this.texto = savingsInt;
             });
-        }
+        },
+        makeDropdown() {
+            const select = this.$el.querySelector(".select");
+            const optionList = this.$el.querySelector(".options");
+
+            select.addEventListener("click", function() {
+            select.classList.add('active') 
+            optionList.classList.add('open-options');
+            });
+
+            optionList.addEventListener("click", function(e) {
+                if (e.target && e.target.nodeName === "LI") {
+                    const option = e.target.textContent;
+
+                    const optionOutput = document.querySelector(".selected");
+                    optionOutput.textContent = `${option}`;
+
+                    select.classList.remove('active') 
+                    optionList.classList.remove('open-options');
+                }
+            });
+        },
+        updateFilter(filter) {
+            this.selectedFilter = filter;
+            if (filter === "Maior preço") {
+                this.filteredList = this.listItems.sort(
+                    (a, b) => b.salePrice - a.salePrice
+                );
+            } else if (filter === "Menor preço") {
+                this.filteredList = this.listItems.sort(
+                    (a, b) => a.salePrice - b.salePrice
+                );
+            } else if (filter === "Título") {
+                this.filteredList = this.listItems.sort((a, b) =>
+                    a.title.localeCompare(b.title)
+                );
+            } else {
+                this.filteredList = this.listItems.sort(
+                    (a, b) => b.savings - a.savings
+                );
+            }
+        },
     },
     mounted() {
       this.getData(),
-      this.savings = this.$refs.savings;
+      this.savings = this.$refs.savings,
+      this.filteredList = this.listItems;
     }
 }
 </script>
 
 <style lang="scss">
 @import "@/assets/scss/components/card.scss";
+@import "@/assets/scss/components/_filter.scss";
 </style>
