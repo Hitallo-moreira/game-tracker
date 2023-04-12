@@ -3,7 +3,7 @@
     <p class="filter-title">Ordernar por:</p>
     <div class="dropdown" @click="makeDropdown()">
       <div class="select">
-        <span class="selected">% de Desconto</span>
+        <span class="selected">{{ default_filter }}</span>
       </div>
       <ul class="options">
         <li v-for="(filter_name, index) in filters" v-bind:key="index"> {{ filter_name }}</li>
@@ -17,7 +17,8 @@ export default {
     name: "GameFilter",
     data() {
         return {
-            filters: ['% de Desconto', 'Maior preço', 'Menor preço', 'Título']
+            filters: ['% de Desconto', 'Maior preço', 'Menor preço', 'Título'],
+            default_filter: '% de Desconto'
         }
     },
     methods: {

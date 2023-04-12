@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="main heading-options">
+            <SearchBar />
             <div class="order-by">
                 <p class="filter-title">Ordernar por:</p>
                 <div class="dropdown" @click="makeDropdown()">
@@ -55,9 +56,13 @@
 </template>
 
 <script>
+import SearchBar from '../SearchBar/SearchBar.vue'
 export default {
     name: "GameCard",
-     data() {
+    components: {
+        SearchBar
+    },
+    data() {
       return {
         listItems: [],
         savingsArray: [],

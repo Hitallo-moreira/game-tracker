@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1 class="title">{{ title }}</h1>
         <div class="search">
+            <h1 class="title">{{ title }}</h1>
             <input type="text" id="searchbar" placeholder="Procurar">
         </div>
     </div>
