@@ -7,7 +7,7 @@ lista de games feita com Vue</p>
   <a href="#tecnologias">Tecnologias utilizadas</a> • 
 </p>
 <h4 align="center">
-	Acesse em: " target="_blank"></a>
+	Acesse em: 
 </h4>
 
 <h2 id="instalacao">Instalação</h2>
