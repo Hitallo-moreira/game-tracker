@@ -7,7 +7,7 @@ lista de games feita com Vue</p>
   <a href="#tecnologias">Tecnologias utilizadas</a> • 
 </p>
 <h4 align="center">
-	Acesse em: <a href="https://htodolsist.netlify.app/" target="_blank">To-do list</a>
+	Acesse em: " target="_blank"></a>
 </h4>
 
 <h2 id="instalacao">Instalação</h2>
