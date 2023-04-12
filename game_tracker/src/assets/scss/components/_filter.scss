@@ -6,10 +6,6 @@
     align-items: center;
     justify-content: flex-end;
 
-    @include xs-breakpoint {
-        
-    }
-
     @include sm-breakpoint {
         align-items: baseline;
         width: 100%;
