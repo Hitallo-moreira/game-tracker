@@ -6,9 +6,6 @@ lista de games feita com Vue</p>
   <a href="#instalacao">Instalação</a> • 
   <a href="#tecnologias">Tecnologias utilizadas</a> • 
 </p>
-<h4 align="center">
-	Acesse em: 
-</h4>
 
 <h2 id="instalacao">Instalação</h2>
 <b>Para baixar e executar o projeto siga as seguintes instruções:</b>
