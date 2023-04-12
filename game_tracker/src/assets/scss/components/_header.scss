@@ -25,8 +25,11 @@
 }
 
 .main.logo {
+    @include xs-breakpoint {
+        text-align: center;
+    }
+
     @include sm-breakpoint {
-        display: flex;
-        justify-content: center;
+        text-align: center;
     }
 }

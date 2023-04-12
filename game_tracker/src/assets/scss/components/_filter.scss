@@ -5,17 +5,14 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
-    top: 2px;
-    height: 50px;
 
     @include xs-breakpoint {
-        top: 0;
+        
     }
 
     @include sm-breakpoint {
         align-items: baseline;
-        width: 380px;
+        width: 100%;
     }
 
     .filter-title {
@@ -31,6 +28,10 @@
             font-size: $xs-font-size;
             line-height: 12px;
             margin: 0px 0px 4px 0;
+        }
+
+        @include sm-breakpoint {
+           font-size: 16px;
         }
     }
 
@@ -139,6 +140,7 @@
         .open-options {
             display: block;
             opacity: 1;
+            position: relative;
         }
 
         .active {
@@ -163,6 +165,5 @@
 
     @include xs-breakpoint {
         flex-direction: column;
-        width: 43%;
     }
 }

@@ -34,4 +34,8 @@
             width: 304px;
         }
     }
+
+    @include xs-breakpoint {
+        margin-bottom: 32px;
+    }
 }
